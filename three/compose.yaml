@@ -1,0 +1,36 @@
+services:
+  db:
+    build: ./db
+    networks:
+      - network_1
+    environment:
+      MYSQL_ROOT_PASSWORD: start123
+      MYSQL_DATABASE: database
+    restart: always
+
+  server_a:
+    build: ./server_a
+    ports:
+      - 8000:8000
+    networks:
+      - network_1
+      - network_2
+    environment:
+      MYSQL_DATABASE: database
+      MYSQL_USER: root
+      MYSQL_PASSWORD: start123
+      MYSQL_HOST: db
+    depends_on:
+      - db
+  server_b:
+    build: ./server_b
+    ports:
+      - 3000:3000
+    networks:
+      - network_2
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
+
+networks:
+  network_1:
+  network_2:
