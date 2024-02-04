@@ -2,21 +2,24 @@
 
 To use this I'd suggest to do so in a python venv.
 Create a virtual environment:
+
 `python3 -m venv test_env`
 
 And in a next step activate it:
+
 `source test_env/bin/activate`
 
 prepare pip:
+
 `python3 -m pip install --upgrade pip`
 
 Install the dependencies
+
 `python3 -m pip install -r requirements.txt`
 
-
-
 And run pytest:
-`python3 pytest -m tests`
+
+`python3 -m pytest tests`
 
 If you just want to just compute use it:
 `
