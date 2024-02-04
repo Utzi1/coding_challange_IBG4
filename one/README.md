@@ -5,7 +5,7 @@ Create a virtual environment:
 `python3 -m venv test_env`
 
 And in a next step activate it:
-`source test_env/bin/acivate`
+`source test_env/bin/activate`
 
 prepare pip:
 `python3 -m pip install --upgrade pip`
@@ -16,7 +16,7 @@ Install the dependencies
 
 
 And run pytest:
-`python pytest -m tests`
+`python3 pytest -m tests`
 
 If you just want to just compute use it:
 `
