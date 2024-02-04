@@ -7,8 +7,13 @@ Create a virtual environment:
 And in a next step activate it:
 `source test_env/bin/acivate`
 
-Install dependencies:
-`pip install -r requirements.txt`
+prepare pip:
+`python3 -m pip install --upgrade pip`
+
+Install the dependencies
+`python3 -m pip install -r requirements.txt`
+
+
 
 And run pytest:
 `python pytest -m tests`
